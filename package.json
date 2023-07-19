@@ -4,8 +4,7 @@
   "description": "The app to track bug in a project.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "build": "npm i"
+   
   },
   "author": "Suraj Sahani",
   "license": "ISC",
