@@ -5,8 +5,19 @@ const db = require('./config/mongoose');
 const port = process.env.PORT || 8000;
 const app = express();
 const path = require('path');
-
+const cors = require('cors')
 const expressLayouts = require('express-ejs-layouts');
+
+
+app.use(cors(
+  {
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
+
+
 
 app.use(express.urlencoded());
 app.use(express.static('assets'));

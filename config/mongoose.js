@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://0.0.0.0:27017/db';
+const url = 'mongodb+srv://ss8065134:<HfPQueoD70XB9mBj>@cluster0.57axaw6.mongodb.net/?retryWrites=true&w=majority';
 // mongoose.connect('url') 
 mongoose.connect(url);
 const db=mongoose.connection;
@@ -13,3 +13,8 @@ db.once('open',()=>{
 });
 
 module.exports=db;  //Exports db
+
+
+
+
+
