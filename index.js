@@ -2,21 +2,11 @@ require('dotenv').config();  //Load Env
 const express = require('express');
 
 const db = require('./config/mongoose');
-const port = process.env.PORT || 8000;
+const port =  8000;
 const app = express();
-const path = require('path');
-const cors = require('cors')
+//const path = require('path');
+
 const expressLayouts = require('express-ejs-layouts');
-
-
-app.use(cors(
-  {
-    origin: ["https://deploy-mern-1whq.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-));
-
 
 
 app.use(express.urlencoded());
@@ -38,5 +28,26 @@ app.listen(port, function (err) {
     console.log(`Error in running the server: ${err}`);
   }
   console.log(`Server is running on port: ${port}`);
+
+
+
+  
 });
+
+
+// // Establish MongoDB connection before starting the server
+// connectToDatabase()
+// .then(() => {
+//   // Start the server
+//   app.listen(port, (err) => {
+//     if (err) {
+//       console.log(`Error is running on server: ${err}`);
+//       return;
+//     }
+//     console.log("{Shree Ganeshay Namah} Server is up and running at port " + port);
+//   });
+// })
+// .catch((error) => {
+//   console.error('Failed to establish MongoDB Atlas connection:', error);
+// });
 
