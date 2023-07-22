@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "The app to track bug in a project.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "nodemon index.js",
+    "build": "npm i"
+  },
   "author": "Suraj Sahani",
   "license": "ISC",
   "dependencies": {
